@@ -1,0 +1,11 @@
+<%= render 'shared/validaciones', :entidad => @entrada %>
+
+<%= form_for @entrada do |f| %>
+    <%= f.label :titulo, 'Título:' %><br />
+    <%= f.text_field :titulo %><br /><br />
+
+    <%= f.label :contenido, 'Contenido:'  %><br />
+    <%= f.text_area :contenido, :size => '80x6' %><br />
+
+    <%= f.submit 'Guardar' %>
+<% end %>

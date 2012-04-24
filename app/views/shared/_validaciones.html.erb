@@ -1,0 +1,10 @@
+<% if entidad.errors.any? %>
+ <div class="error">
+  <%= content_tag :h4, "Se ha encontrado " + pluralize( entidad.errors.count, "error", "errores" ) %>
+  <ul>
+  <% entidad.errors.full_messages.each do |mensaje|  %>
+    <li><%= mensaje %></li>
+  <% end %>
+  </ul>
+  </div>
+<% end %>

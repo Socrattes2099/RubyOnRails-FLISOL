@@ -1,0 +1,26 @@
+<%= render 'shared/validaciones', :entidad => @nuevo_comentario %>
+
+<h3 class="titulo">Título: <%= @entrada.titulo %></h3>
+
+<strong>Contenido</strong><br />
+<p><%= @entrada.contenido %></p>
+
+<%= link_to 'Ir a lista de entradas', entradas_path %>
+
+<br /><br />
+<div id="comentarios">
+<h2>Comentarios</h2>
+<%= form_for @nuevo_comentario do |f| %>
+ <%= f.label :texto, 'Nuevo Comentario' %><br />
+ <%= f.text_area :texto, :size => '60x4'  %><br />
+ <%= f.hidden_field :entrada_id, :value => @entrada.id %>
+ <%= f.submit 'Enviar' %>
+<% end %>
+
+<h3>Mostrando <%= pluralize @comentarios.count, 'comentario' %></h3>
+<% @comentarios.each do |comentario| %>
+    <em>Publicado a las <%= comentario.fecha_publicacion.strftime("%I:%M %p") %></em>
+    <p><%= comentario.texto %></p>
+    <div class="separador"></div>
+<% end %>
+</div>

@@ -1,0 +1,8 @@
+== Aplicación de demostración para Exposición 'Desarrollo de Apps Web en Ruby on Rails'
+Contiene los dos ejemplos:
+- Página con mensaje Hola Mundo
+- Mini-aplicación de blogs
+
+** Desarrollado por Bayron Guevara, Presidente Digital Sense S.A. http://www.digitalsensehn.com **
+
+Licenciado bajo GNU GPLv2 http://www.gnu.org/licenses/gpl-2.0.html
